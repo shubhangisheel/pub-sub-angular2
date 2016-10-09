@@ -1,0 +1,114 @@
+<div class="container" id="bootstrap-override">
+
+  <!--Fourth row begins-->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h3 id="PostAndGet" class="tryGetPost">Simple post and get <a class ="pull-right h3-custom" href="#Top">Top<span class = "glyphicon glyphicon-triangle-top pull-right" aria-hidden="true"></span></a></h3>
+      <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+
+        <!--Post begins-->
+        <div class="panel panel-default">
+          <div class="panel-heading panel-heading-post" role="tab" id="headingOne">
+            <h4 class="panel-title panel-title-custom1">
+              <a class= "all-post" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Post  <span class = "text push-down" style="font-size: 14px;"> / api / thingName / add</span><span class = "text-right pull-right push-down" style="font-size: 14px;">send data to cloud</span>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body panel-body-custom1">
+              <form>
+
+                <table class="table table1">
+                  <thead>
+                  <tr>
+                    <th>Parameters</th>
+                    <th class="table-post-value">Value</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+                      <label for="formGroupData1">Thing Name</label>
+                    </td>
+                    <td>
+                      <input type="text" [(ngModel)]="thingName" name="thingName" class="form-control" id="formGroupData1" placeholder="Enter resource name here" required="required">
+                    </td>
+                    <td>A thing name is the name of the iot sensor device. It is advised to use devide Id to maintain uniqueness.</td>
+                    <td>Thing name : TA395 : Tempature sensor</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>Content</label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <table class="table table1">
+                  <tbody id="simplePostTable" *ngFor="let keyValue of keyValues">
+                  <div>
+                    <tr>
+                      <td>
+                        <label for="formGroupData3">Key</label>
+                      </td>
+                      <td>
+                        <input type="text" [(ngModel)]="keyValue.key" name="keyValue.key" class="form-control" id="formGroupData3" placeholder="Enter content here" required="required">
+                      </td>
+                      <td>Enter your JSON string value here</td>
+                      <td>JSON String : first dweet : For tempature sensor</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="formGroupData4">Value</label>
+                      </td>
+                      <td>
+                        <input type="text" [(ngModel)]="keyValue.value" name="keyValue.value" class="form-control" id="formGroupData4" placeholder="Enter content here" required="required">
+                      </td>
+                      <td>Enter your JSON string value here</td>
+                      <td>JSON String : first dweet : For tempature sensor</td>
+                    </tr>
+
+                  </div>
+                  </tbody>
+                </table>
+                <button type="submit" (click)="addKey()" class="btn btn-custom1">Add Another Key !</button>
+                <button type="submit" (click)="onPost()" class="btn btn-custom1">Try it Out!</button>
+              </form>
+              <div *ngIf="showPostResponse">
+                <h4>Response from Server</h4>
+                <table class="table table1">
+                  <thead>
+                  <tr>
+                    <th>Thing Name</th>
+                    <th class="table-post-value">Content saved</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Post ends-->
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
