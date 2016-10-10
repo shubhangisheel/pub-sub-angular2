@@ -6,20 +6,32 @@ import {Component} from '@angular/core';
 import {keyValues} from '../model/keyValues';
 
 @Component({
-    selector:'simple-get-post',
-    templateUrl:'../html/simple-get-post.component.html',
-    styleUrls:['../css/simple-get-post.component.css']
+  selector:'simple-get-post',
+  templateUrl:'../html/simple-get-post.component.html',
+  styleUrls:['../css/simple-get-post.component.css']
 })
 export class SimpleGetPostComponent{
-    public thingName : string;
-    public showPostResponse: boolean = false;
-    public keyValues: keyValues[] = [{key:'',value:''}];
+  public thingName : string;
+  public showPostResponse: boolean = false;
+  public showGetLatestResponse: boolean = false;
+  public showGetAllResponse: boolean = false;
 
-    addKey(){
-        this.keyValues.push({key:'',value:''});
-    }
+  public keyValues: keyValues[] = [{key:'',value:''}];
 
-    onPost(){
-      console.log(this.keyValues);
-    }
+  addKey(){
+    this.keyValues.push({key:'',value:''});
+  }
+
+  onPost(){
+    this.showPostResponse = true;
+    console.log(this.keyValues);
+  }
+
+  onGetLatest(){
+    this.showGetLatestResponse = true;
+  }
+
+  onGetAll(){
+    this.showGetAllResponse = true;
+  }
 }
