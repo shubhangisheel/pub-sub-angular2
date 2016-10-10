@@ -7,12 +7,14 @@ import { AppComponent } from './components/app.component';
 
 import {HomeContentComponent} from './components/home-content.component';
 import {SimpleGetPostComponent} from './components/simple-get-post.component';
+import {SecureDataComponent} from './components/secure-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeContentComponent,
-    SimpleGetPostComponent
+    SimpleGetPostComponent,
+    SecureDataComponent
   ],
   imports: [
     BrowserModule,
