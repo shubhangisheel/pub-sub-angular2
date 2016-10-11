@@ -1,0 +1,116 @@
+<!--Top Navigation bar-->
+<nav class="navbar navbar-inverse navbar-style" role="navigation" id="Top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1><a href="app.component.html" title="Go to iot-orchard home"><u>iotorchard.io</u></a></h1>
+    </div>
+    <!--check routing for above-->
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <form (ngSubmit)="onLogin()"#userLogin="ngForm">
+
+            <table>
+              <tbody>
+              <tr style="color: white;">
+                <td>
+                  <label for="userName">UserName</label>
+                </td>
+                <td>
+                  <label for="loginPassword">Password</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="form-control" id="userName" required
+                         [(ngModel)]="userName" name="userName" #checkInput="ngModel">
+                  <!-- <div [hidden] = "checkInput.valid || checkInput.pristine"
+           class="alert alert-danger">UserName is required</div> -->
+                </td>
+                <td>
+                  <input type="text" class="form-control" id="loginPassword" required
+                         [(ngModel)]="loginPassword" name="loginPassword" #checkInput="ngModel">
+                  <!--  <div [hidden] = "checkInput.valid || checkInput.pristine"
+           class="alert alert-danger">Password is required</div> -->
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-default" [disabled]="!userLogin.form.valid">Login </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td><a href="">Forgot account?</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+<!--Top Navigation bar closes-->
+
+<body>
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+  We help you save your data!
+  <br> We help you analyse your data!
+  <br> Sign Up and checkout what we offer!
+  <br>
+  <img src="">
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+  <h1>Sign Up for Free ! </h1>
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSignUp()" #userSignUp="ngForm" style="width:90%;">
+
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" required placeholder="Enter your first name"
+               [(ngModel)]="firstName" name="firstName" #checkInput="ngModel">
+        <!-- <div [hidden] = "checkInput.valid || checkInput.pristine"
+                 class="alert alert-danger">Name is required</div> -->
+
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required placeholder="Enter your last name"
+               [(ngModel)]="lastName" name="lastName" #checkInput="ngModel">
+        <!-- <div [hidden] = "checkInput.valid || checkInput.pristine"
+                 class="alert alert-danger">Name is required</div> -->
+      </div>
+
+      <!--No exactly clear with pristine-->
+      <!-- We have added NgModel to two way bind name attribute of Hero object -->
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter your email address"
+               [(ngModel)]="email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="reEnterEmail">Re-enter Email</label>
+        <input class="form-control" id="reEnterEmail" required placeholder="Re-enter your email address"
+               [(ngModel)]="reEnterEmail" name="reEnterEmail">
+      </div>
+
+      <div class="form-group">
+        <label for="signUpPassword">Password</label>
+        <input class="form-control" id="signUpPassword" required placeholder="Enter password"
+               [(ngModel)]="signUpPassword" name="signUpPassword">
+      </div>
+
+
+      <button type="submit" class="btn btn-default" [disabled]="!userLogin.form.valid">Sign Up</button>
+
+    </form>
+  </div>
+</div>
+</body>

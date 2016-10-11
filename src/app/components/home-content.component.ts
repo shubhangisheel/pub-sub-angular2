@@ -3,9 +3,11 @@
  */
 import {Component} from '@angular/core';
 
+import {SimpleGetPostComponent} from './simple-get-post.component';
+import {SecureDataComponent} from './secure-data.component';
 
 @Component({
-  selector: 'home-content',
+  selector: 'homeContent',
   templateUrl:'../html/home-content.component.html',
   styleUrls:['../css/home-content.component.css']
 })
