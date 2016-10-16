@@ -1,73 +1,75 @@
-<!--Top Navigation bar-->
-<nav class="navbar navbar-inverse navbar-style" role="navigation" id="Top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <h1><a href="app.component.html" title="Go to iot-orchard home"><u>iotorchard.io</u></a></h1>
-    </div>
-    <!--check routing for above-->
+<div class="container" id="bootstrap-override">
 
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <form (ngSubmit)="onLogin()"#userLogin="ngForm">
 
-            <table>
-              <tbody>
-              <tr style="color: white;">
-                <td>
-                  <label for="userName">UserName</label>
-                </td>
-                <td>
-                  <label for="loginPassword">Password</label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="text" class="form-control" id="userName" required
-                         [(ngModel)]="userName" name="userName" #checkInput="ngModel">
-                  <!-- <div [hidden] = "checkInput.valid || checkInput.pristine"
-           class="alert alert-danger">UserName is required</div> -->
-                </td>
-                <td>
-                  <input type="text" class="form-control" id="loginPassword" required
-                         [(ngModel)]="loginPassword" name="loginPassword" #checkInput="ngModel">
-                  <!--  <div [hidden] = "checkInput.valid || checkInput.pristine"
-           class="alert alert-danger">Password is required</div> -->
-                </td>
-                <td>
-                    <button type="submit" class="btn btn-default" [disabled]="!userLogin.form.valid">Login </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                </td>
-                <td><a href="">Forgot account?</a>
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </form>
-        </li>
-      </ul>
-    </div>
-  </div>
 
-</nav>
-<!--Top Navigation bar closes-->
+  <!--<div class="container-fluid">-->
+    <!--<div class="navbar-header">-->
+      <!--<h1><a href="app.component.html" title="Go to iot-orchard home"><u>iotorchard.io</u></a></h1>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;check routing for above&ndash;&gt;-->
+
+    <!--<div class="collapse navbar-collapse">-->
+      <!--<ul class="nav navbar-nav navbar-right">-->
+        <!--<li>-->
+          <!--<form (ngSubmit)="onLogin()"#userLogin="ngForm">-->
+
+            <!--<table>-->
+              <!--<tbody>-->
+              <!--<tr style="color: white;">-->
+                <!--<td>-->
+                  <!--<label for="userName">UserName</label>-->
+                <!--</td>-->
+                <!--<td>-->
+                  <!--<label for="loginPassword">Password</label>-->
+                <!--</td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                <!--<td>-->
+                  <!--<input type="text" class="form-control" id="userName" required-->
+                         <!--[(ngModel)]="userName" name="userName" #checkInput="ngModel">-->
+                  <!--&lt;!&ndash; <div [hidden] = "checkInput.valid || checkInput.pristine"-->
+           <!--class="alert alert-danger">UserName is required</div> &ndash;&gt;-->
+                <!--</td>-->
+                <!--<td>-->
+                  <!--<input type="text" class="form-control" id="loginPassword" required-->
+                         <!--[(ngModel)]="loginPassword" name="loginPassword" #checkInput="ngModel">-->
+                  <!--&lt;!&ndash;  <div [hidden] = "checkInput.valid || checkInput.pristine"-->
+           <!--class="alert alert-danger">Password is required</div> &ndash;&gt;-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<button type="submit" class="btn btn-default" [disabled]="!userLogin.form.valid">Login </button>-->
+                <!--</td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                <!--<td>-->
+                <!--</td>-->
+                <!--<td><a href="">Forgot account?</a>-->
+                <!--</td>-->
+              <!--</tr>-->
+              <!--</tbody>-->
+            <!--</table>-->
+          <!--</form>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+
+<!--</nav>-->
+<!--&lt;!&ndash;Top Navigation bar closes&ndash;&gt;-->
 
 <body>
-<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<div  style="margin-top:40px; font-size: 20px;" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
   We help you save your data!
   <br> We help you analyse your data!
   <br> Sign Up and checkout what we offer!
   <br>
-  <img src="">
+  <!--<img src="">-->
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
   <h1>Sign Up for Free ! </h1>
   <div [hidden]="submitted">
-    <form (ngSubmit)="onSignUp()" #userSignUp="ngForm" style="width:90%;">
+      <form (ngSubmit)="onSignUp()" #userSignUp="ngForm" style="width:90%;">
 
       <div class="form-group">
         <label for="firstName">First Name</label>
@@ -113,4 +115,21 @@
     </form>
   </div>
 </div>
+
 </body>
+
+  </div>
+
+<!--Footer begins-->
+<footer>
+
+  <div class=" navbar navbar-default footer-style navbar-fixed-bottom">
+    <div class="container-fluid">
+      <p class="navbar-text pull-left ">iotorchard.io is brought to you by this.com</p>
+      <a class="navbar-text pull-right" href="">Privacy and Terms</a>
+
+    </div>
+  </div>
+</footer>
+<!--Footer ends-->
+
